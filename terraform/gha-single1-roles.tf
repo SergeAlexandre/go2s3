@@ -1,7 +1,3 @@
-provider "aws" {
-  region  = "us-east-2"
-  profile = "bssa"
-}
 
 data "aws_caller_identity" "account" {}
 
