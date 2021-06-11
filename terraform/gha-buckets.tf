@@ -9,6 +9,25 @@ resource "aws_s3_bucket" "gha1p1" {
   }
 }
 
+resource "aws_s3_bucket" "gha1s1" {
+  bucket = "gha1-secondary-1"
+  acl    = "private"
+
+  tags = {
+    owner = "sergea"
+  }
+}
+
+
+resource "aws_s3_bucket" "gha1spark" {
+  bucket = "gha1-spark"
+  acl    = "private"
+
+  tags = {
+    owner = "sergea"
+  }
+}
+
 
 resource "aws_s3_bucket" "gha2p1" {
   bucket = "gha2-primary-1"

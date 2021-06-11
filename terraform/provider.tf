@@ -1,4 +1,9 @@
+//provider "aws" {
+//  region  = "us-east-2"
+//  profile = "bssa"
+//}
+
 provider "aws" {
-  region  = "us-east-2"
-  profile = "bssa"
+  region  = "eu-west-3"
+  profile = "cagip"
 }
