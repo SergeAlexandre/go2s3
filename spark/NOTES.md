@@ -50,7 +50,9 @@ aws s3 rm --recursive s3://gha-common-1/raw/src=2021-06-10-00
 In all .../tmp:
 watch -n 1 "du -hs *"
 
-time ./submit-local.sh Json2Parquet --srcBucketFormat gha1-primary-1 --dstBucketFormat gha1-secondary-1 --maxFiles 1 --backDays 2
+time ./submit-local.sh Json2Parquet --srcBucketFormat gha1-primary-1 --dstBucketFormat gha1-secondary-1 --maxFiles 1 --backDays 0
 
 aws s3 --profile gha1 rm --recursive s3://gha1-secondary-1/raw/year=2021/month=06/day=09/hour=00
 
+Long running
+./submit-local.sh Json2Parquet --srcBucketFormat gha1-primary-1 --dstBucketFormat gha1-secondary-1 --maxFiles 100 --backDays 0 --waitSeconds 900
